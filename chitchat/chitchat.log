@@ -1,0 +1,12 @@
+ERROR 2020/03/05 08:30:55 utils.go:102: dial tcp 127.0.0.1:5432: connect: connection refused Cannot create user
+ERROR 2020/03/05 08:31:01 utils.go:102: dial tcp 127.0.0.1:5432: connect: connection refused Cannot find user
+ERROR 2020/03/05 08:31:11 utils.go:102: dial tcp 127.0.0.1:5432: connect: connection refused Cannot create user
+ERROR 2020/03/05 08:31:19 utils.go:102: dial tcp 127.0.0.1:5432: connect: connection refused Cannot find user
+ERROR 2020/03/05 08:33:32 utils.go:102: dial tcp 127.0.0.1:5432: connect: connection refused Cannot find user
+ERROR 2020/03/05 09:01:35 utils.go:102: dial tcp 127.0.0.1:5432: connect: connection refused Cannot create user
+ERROR 2020/03/05 09:01:53 utils.go:102: dial tcp 127.0.0.1:5432: connect: connection refused Cannot find user
+ERROR 2020/03/05 09:15:04 main.go:319: dial tcp 127.0.0.1:5432: connect: connection refused Cannot create user
+ERROR 2020/03/05 09:27:38 utils.go:102: dial tcp 127.0.0.1:5432: connect: connection refused Cannot find user
+ERROR 2020/03/05 09:27:51 utils.go:102: dial tcp 127.0.0.1:5432: connect: connection refused Cannot create user
+ERROR 2020/03/05 09:28:58 utils.go:102: dial tcp 127.0.0.1:5432: connect: connection refused Cannot find user
+ERROR 2020/03/05 09:29:11 utils.go:102: dial tcp 127.0.0.1:5432: connect: connection refused Cannot find user
