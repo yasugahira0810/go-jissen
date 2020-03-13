@@ -1,5 +1,4 @@
 create:
-	cp .envsample .env
 	docker-compose up -d --build
 up:
 	docker-compose up -d

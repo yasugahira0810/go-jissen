@@ -1,6 +1,6 @@
 # go-jissen
 
-[Go実践入門のchitchat](https://github.com/mushahiroyuki/gowebprog/tree/master/ch02/chitchat)の練習用リポジトリ。
+[Go実践入門の7.6 Go Webサービスの作成](https://github.com/mushahiroyuki/gowebprog/tree/master/ch07/14web_service)の練習用リポジトリ。
 
 ## 動作環境
 
