@@ -26,6 +26,16 @@
 % make build
 ```
 
+3. コンテナ内に入る
+```bash
+% make exec
+```
+
+4. バイナリファイル実行
+```bash
+(コンテナ内)$ build/14web_service
+```
+
 ## 動作確認
 ```bash
 % curl -i -X POST -H "Content-Type: application/json"  -d '{"content":"My first post","author":"Sau Sheong"}' http://127.0.0.1:8080/post/
