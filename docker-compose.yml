@@ -5,7 +5,7 @@ services:
       context: ./
       dockerfile: ./docker/golang/Dockerfile
     volumes:
-      - ./chitchat:/go/src/chitchat
+      - ./14web_service:/go/src/14web_service
     ports:
       - 8080:8080
     environment: 

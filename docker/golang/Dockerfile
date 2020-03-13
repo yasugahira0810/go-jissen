@@ -11,4 +11,4 @@ RUN apt-get update -qq && \
     go mod download
 
 EXPOSE 8080
-CMD [ "/bin/bash" ]
+CMD [ "build/14web_service" ]

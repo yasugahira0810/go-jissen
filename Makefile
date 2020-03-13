@@ -9,4 +9,4 @@ destroy:
 exec:
 	docker-compose exec app bash
 build:
-	docker-compose exec app go build -ldflags="-w -s" -o build/chitchat .
+	docker-compose exec app go build -ldflags="-w -s" -o build/14web_service .

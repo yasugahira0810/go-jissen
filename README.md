@@ -26,21 +26,17 @@
 % make build
 ```
 
-3. コンテナ内に入る
+## 動作確認
 ```bash
-% make exec
-```
+% curl -i -X POST -H "Content-Type: application/json"  -d '{"content":"My first post","author":"Sau Sheong"}' http://127.0.0.1:8080/post/
+HTTP/1.1 200 OK
+Date: Fri, 13 Mar 2020 14:12:38 GMT
+Content-Length: 0
 
-4. バイナリファイル実行
-```bash
-(コンテナ内)$ build/chitchat
 ```
-
-5. localhost:8080 にアクセス
 
 ## コンテナ、イメージ削除
-
-```
+```bash
 % make destroy
 ```
 
@@ -66,22 +62,4 @@ DBName := os.Getenv("DB_NAME")
 connect := fmt.Sprintf(connectTemplate, DBHost, DBPort, DBUser, DBPass, DBName)
 
 Db, err = sql.Open("postgres", connect)
-```
-
-### DBの初期投入クエリ
-
-初回DBコンテナ作成時に、テーブルがドロップできずエラーとなるため、以下を実施した。
-
-* `/chitchat/data/setup.sql`を`/docker/postgres/init/*`にコピー
-* `drop`文を以下に変更
-
-```diff
-- drop table posts;
-- drop table threads;
-- drop table sessions;
-- drop table users;
-+ drop table if exists posts;
-+ drop table if exists threads;
-+ drop table if exists sessions;
-+ drop table if exists users;
 ```
