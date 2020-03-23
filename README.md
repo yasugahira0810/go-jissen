@@ -26,7 +26,7 @@
 % make build
 ```
 
-3. コンテナ内に入る
+3. APコンテナ内に入る
 ```bash
 % make exec
 ```
@@ -36,6 +36,16 @@
 (コンテナ内)$ build/14web_service
 ```
 
+## DBコンテナでの事前確認
+
+```
+docker exec -it go-jissen_postgres_1 /bin/bash
+root@2f4cbcbd1f36:/# psql -U gwp -d gwp -c "select * from posts;"
+ id | content | author 
+----+---------+--------
+(0 rows)
+```
+
 ## 動作確認
 ```bash
 % curl -i -X POST -H "Content-Type: application/json"  -d '{"content":"My first post","author":"Sau Sheong"}' http://127.0.0.1:8080/post/
@@ -43,6 +53,17 @@ HTTP/1.1 200 OK
 Date: Fri, 13 Mar 2020 14:12:38 GMT
 Content-Length: 0
 
+```
+
+## DBコンテナでの事後確認
+
+```
+docker exec -it go-jissen_postgres_1 /bin/bash
+root@2f4cbcbd1f36:/# psql -U gwp -d gwp -c "select * from posts;"
+ id |    content    |   author   
+----+---------------+------------
+  1 | My first post | Sau Sheong
+(1 row)
 ```
 
 ## コンテナ、イメージ削除
