@@ -33,14 +33,15 @@
 
 4. バイナリファイル実行
 ```bash
-(コンテナ内)$ build/14web_service
+(APコンテナ内)# build/14web_service
 ```
 
 ## DBコンテナでの事前確認
 
-```
+```bash
+// ２つ目のプロンプトを立ち上げる
 docker exec -it go-jissen_postgres_1 /bin/bash
-root@2f4cbcbd1f36:/# psql -U gwp -d gwp -c "select * from posts;"
+(DBコンテナ内)# psql -U gwp -d gwp -c "select * from posts;"
  id | content | author 
 ----+---------+--------
 (0 rows)
@@ -48,6 +49,7 @@ root@2f4cbcbd1f36:/# psql -U gwp -d gwp -c "select * from posts;"
 
 ## 動作確認
 ```bash
+// ３つ目のプロンプトを立ち上げる
 % curl -i -X POST -H "Content-Type: application/json"  -d '{"content":"My first post","author":"Sau Sheong"}' http://127.0.0.1:8080/post/
 HTTP/1.1 200 OK
 Date: Fri, 13 Mar 2020 14:12:38 GMT
@@ -57,9 +59,9 @@ Content-Length: 0
 
 ## DBコンテナでの事後確認
 
-```
-docker exec -it go-jissen_postgres_1 /bin/bash
-root@2f4cbcbd1f36:/# psql -U gwp -d gwp -c "select * from posts;"
+```bash
+// ２つ目のプロンプト
+(DBコンテナ内)# psql -U gwp -d gwp -c "select * from posts;"
  id |    content    |   author   
 ----+---------------+------------
   1 | My first post | Sau Sheong
